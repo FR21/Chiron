@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="bear.png">
+    <title>ETHEREAL</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id='title'>
+</div>
+</head> 
+<body onload="startTime()">
+                <center>
+                <br>
+                <br>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 id="main">Hello</h1>
+            <div id="clock"></div>
+        </div>
+</body>
+</html>
+<style type="text/css">
+	#clock{
+		color:#032a94;
+		font-size: 100px;
+		margin-top: -30px;
+        font-family: 'Times New Roman', Times, serif;
+	}
+
+	@keyframes animate {
+		0%
+		{
+			transform: translateY(0px);
+		}
+		25%
+		{
+			transform: translateY(20px);
+		}
+		50%
+		{
+			transform: translateY(-20px);
+		}
+		75%
+		{
+			transform: translateY(20px);
+		}
+		100%
+		{
+			transform: translateY(0px);
+		}
+
+	}
+
+	ul li:nth-child(1){
+		animation-delay: 0s;
+	}
+	ul li:nth-child(2){
+		animation-delay: 0.4s;
+	}
+	ul li:nth-child(3){
+		animation-delay: 0.8s;
+	}
+	ul li:nth-child(4){
+		animation-delay: 1.2s;
+	}
+	ul li:nth-child(5){
+		animation-delay: 1.6s;
+	}
+
+	#main{
+		color:dodgerblue;
+        font-size:60px;
+        font face: 'Comic sans MS';
+	}
+
+</style>
+<script type="text/javascript">
+    var nama = ""
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("clock").innerHTML = h+":"+m+":"+s;
+        if (h < 12) {
+            document.getElementById("main").innerHTML = "Good Morning, "+nama
+        } else if (h < 13) {
+            document.getElementById("main").innerHTML = "Good Day, "+nama
+        } else if (h < 18) {
+            document.getElementById("main").innerHTML = "Good Afternoon, "+nama
+        } else if (h < 23) {
+            document.getElementById("main").innerHTML = "Good Night, "+nama
+        } else {document.getElementById("main").innerHTML = "Tidur Woe "+nama;}
+        var t = setTimeout(function(){startTime()},999);
+    }
+    
+    
+    function checkTime(h) {
+        if (h<10) {h = "0" + h};  // add zero in front of numbers < 10
+        return h;
+    }
+    </script>
+
+
