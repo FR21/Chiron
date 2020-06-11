@@ -87,7 +87,7 @@
 
 </style>
 <script type="text/javascript">
-    var nama = "Caca"
+    var nama = "Test"
     function startTime() {
         var today = new Date();
         var h = today.getHours();
@@ -97,11 +97,11 @@
         s = checkTime(s);
         document.getElementById("clock").innerHTML = h+":"+m+":"+s;
         if (h < 12) {
-            document.getElementById("main").innerHTML = "Good Morning, "+nama
+            document.getElementById("main").innerHTML = "0, "+nama
         } else if (h < 13) {
-            document.getElementById("main").innerHTML = "Ku Sayang "+nama
+            document.getElementById("main").innerHTML = "1 "+nama
         } else if (h < 18) {
-            document.getElementById("main").innerHTML = "Mangat "+nama
+            document.getElementById("main").innerHTML = "2 "+nama
         } else if (h < 23) {
             document.getElementById("main").innerHTML = "Good Night, "+nama
         } else {document.getElementById("main").innerHTML = "Tidur Woe  "+nama;}
