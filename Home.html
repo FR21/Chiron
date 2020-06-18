@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>ETHEREAL 2</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+
     <style type="text/css" class="INLINE_PEN_STYLESHEET_ID">body {
       background: #000;
     }
@@ -44,7 +44,7 @@
       jitterRadius: 0,
       jitterHue: 0,
       clearAlpha: 10,
-      toggleOrbitals: false,
+      toggleOrbitals: true,
       orbitalAlpha: 100,
       toggleLight: false,
       lightAlpha: 0,
@@ -208,87 +208,3 @@
         </script>
 </body>
 </html>
-<style type="text/css">
-	#clock{
-		color:#032a94;
-		font-size: 20px;
-		margin-top: -30px;
-        font-family: 'Fredoka One', cursive;
-	}
-
-	@keyframes animate {
-		0%
-		{
-			transform: translateY(0px);
-		}
-		25%
-		{
-			transform: translateY(20px);
-		}
-		50%
-		{
-			transform: translateY(-20px);
-		}
-		75%
-		{
-			transform: translateY(20px);
-		}
-		100%
-		{
-			transform: translateY(0px);
-		}
-
-	}
-
-	ul li:nth-child(1){
-		animation-delay: 0s;
-	}
-	ul li:nth-child(2){
-		animation-delay: 0.4s;
-	}
-	ul li:nth-child(3){
-		animation-delay: 0.8s;
-	}
-	ul li:nth-child(4){
-		animation-delay: 1.2s;
-	}
-	ul li:nth-child(5){
-		animation-delay: 1.6s;
-	}
-
-	#main{
-		color:dodgerblue;
-        font-size:20px;
-        font-family: 'Architects Daughter', cursive;
-        }
-        
-
-</style>
-<script type="text/javascript">
-    var nama = "NAMA"
-    function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        m = checkTime(m);
-        s = checkTime(s);
-        document.getElementById("clock").innerHTML = h+":"+m+":"+s;
-        if (h < 12) {
-            document.getElementById("main").innerHTML = "1 "+nama
-        } else if (h < 15) {
-            document.getElementById("main").innerHTML = "2 "+nama
-        } else if (h < 18) {
-            document.getElementById("main").innerHTML = "3 "+nama
-        } else if (h < 23) {
-            document.getElementById("main").innerHTML = "4"+nama
-        } else {document.getElementById("main").innerHTML = "HMM"+nama;}
-        var t = setTimeout(function(){startTime()},999);
-    }
-    
-    
-    function checkTime(h) {
-        if (h<10) {h = "0" + h};  // add zero in front of numbers < 10
-        return h;
-    }
-    </script>
